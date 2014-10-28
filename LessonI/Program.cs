@@ -37,6 +37,7 @@ namespace LessonI
              * pisząc tekst pomiędzy " ") `Hello World!`
              * */
             Console.WriteLine("Hello World!");
+            Console.Read();
         }
     }
 }
