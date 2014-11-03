@@ -8,7 +8,7 @@ namespace BankSystem
 {
     interface SystemUser
     {
-        void TransferMoney(Customer user1, Customer user2, decimal amount);
+        void TransferMoney( Customer user2, decimal amount);
     }
 
    
