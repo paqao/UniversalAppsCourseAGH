@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankOperator.cs" />
+    <Compile Include="BankSystem.cs" />
     <Compile Include="BankWorker.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Program.cs" />

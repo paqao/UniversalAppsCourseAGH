@@ -10,6 +10,8 @@ namespace BankSystem
     {
         static void Main(string[] args)
         {
+            BankOperator newOperator = new BankOperator();
+            var debugValue = newOperator.CreatCustomer();
             Customer c1 = new Customer();
 
             Customer c2 = new Customer();
