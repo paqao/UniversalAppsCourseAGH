@@ -56,7 +56,7 @@ namespace CollectionsExamples
             Console.WriteLine(a);
             Console.ReadKey();
 
-            Dictionary<string,int> dictionary = new Dictionary<string, int>();
+            var dictionary = new Dictionary<string, int>();
 
             dictionary.Add("12345", 12345);
             dictionary["12356"] = 12356;
