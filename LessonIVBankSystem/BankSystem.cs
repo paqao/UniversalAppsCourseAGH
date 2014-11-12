@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,41 @@ namespace BankSystem
         public BankSystem()
         {
            this._administrator = new BankAdmin();
+
+            List<int> customersList = new List<int>();
+            using (var file = File.OpenText("customers.txt"))
+            {
+                while (!file.EndOfStream)
+                {
+                    string tmp = file.ReadLine();
+                    int tmpIntValue;
+                    if (int.TryParse(tmp, out tmpIntValue))
+                    {
+                        customersList.Add(tmpIntValue);
+                    }
+                }
+            }
+
+            foreach (var customer in customersList)
+            {
+                _customers.Add(Customer.LoadCustomer(customer));
+            }
+        }
+
+        public void SaveCustomer()
+        {
+            if(File.Exists("customers.txt"))
+            {
+                File.Delete("customers.txt");   
+            }
+
+            using (var file = File.CreateText("customers.txt"))
+            {
+                foreach (var customer in _customers)
+                {
+                    file.WriteLine(customer.CustomerId);
+                }
+            }
         }
 
         public Customer this[int customerId]

@@ -10,6 +10,16 @@ namespace BankSystem
     {
         static void Main(string[] args)
         {
+            Customer customer = new Customer();
+            customer.Name = "Yolo";
+            customer.LastName = "Swag";
+            customer.Money = 123456;
+            customer.CustomerId = 1;
+
+            Customer.WriteCustomer(customer);
+
+           // Customer customer = Customer.LoadCustomer(1234);
+            //  Console.WriteLine("{0} {1} {2}",customer.Name,customer.LastName,customer.Money);
             BankSystem bankSystem = new BankSystem();
             bankSystem.StartWorking();
             /*BankOperator newOperator = new BankOperator();
