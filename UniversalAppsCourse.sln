@@ -69,6 +69,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{288C011A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankSystem", "LessonV\BankSystem.csproj", "{2D844CAB-CC67-4824-A811-C9E6158C2469}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LessonVI", "LessonVI", "{10204835-3A67-44B1-824B-5CDCB6507BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankManagementLogic", "BankManagementLogic\BankManagementLogic.csproj", "{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		UniversalAppsCourse\UniversalAppsCourse.Shared\UniversalAppsCourse.Shared.projitems*{0e490d6f-9296-4da7-95b6-8472515d105b}*SharedItemsImports = 13
@@ -260,6 +264,16 @@ Global
 		{2D844CAB-CC67-4824-A811-C9E6158C2469}.Release|ARM.ActiveCfg = Release|Any CPU
 		{2D844CAB-CC67-4824-A811-C9E6158C2469}.Release|x64.ActiveCfg = Release|Any CPU
 		{2D844CAB-CC67-4824-A811-C9E6158C2469}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -292,5 +306,6 @@ Global
 		{CB5AF10F-D7A1-44B2-A6C3-FC714172CFB7} = {4B007E72-9401-4170-9395-BF0662157C43}
 		{288C011A-6AEF-49F4-BCB5-15C09E8356BC} = {75847FB8-CDEF-4D3E-AF1B-C215C4FB6F0C}
 		{2D844CAB-CC67-4824-A811-C9E6158C2469} = {288C011A-6AEF-49F4-BCB5-15C09E8356BC}
+		{8A5B1B2A-C3E0-4D4A-8AA5-B747CD09C91C} = {10204835-3A67-44B1-824B-5CDCB6507BCF}
 	EndGlobalSection
 EndGlobal
