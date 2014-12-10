@@ -10,23 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ClientManager
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MyWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MyWindow : Window
     {
-        public MainWindow()
+        public MyWindow()
         {
             InitializeComponent();
-            User usr = new User();
-            usr.FirstName = "franek";
-            UserViewModel uservm = new UserViewModel(usr);
-            this.DataContext = uservm;
         }
     }
 }
