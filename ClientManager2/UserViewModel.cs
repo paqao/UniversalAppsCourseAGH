@@ -6,25 +6,13 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using ClientManager.Annotations;
 
 namespace ClientManager
 {
-     public  class UserViewModel : INotifyPropertyChanged
-    {
-         private User _user;
-         public event PropertyChangedEventHandler PropertyChanged;
-
-         [NotifyPropertyChangedInvocator]
-         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+     public  class UserViewModel : ViewModel<User>
+     {
+         public UserViewModel(User user) : base(user)
          {
-             PropertyChangedEventHandler handler = PropertyChanged;
-             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
-         }
-
-         public UserViewModel(User user)
-         {
-             this._user = user;
              MyCommand = new MyCommand(this);
          }
 
@@ -32,19 +20,19 @@ namespace ClientManager
          {
              get
              {
-                 if (_user == null)
+                 if (InnerObject == null)
                      return String.Empty;
 
-                 return _user.FirstName;
+                 return InnerObject.FirstName;
              }
              set
              {
-                 if(_user == null)
+                 if(InnerObject == null)
                      return;
 
-                 if (value != _user.FirstName)
+                 if (value != InnerObject.FirstName)
                  {
-                     _user.FirstName = value;
+                     InnerObject.FirstName = value;
                      OnPropertyChanged("FirstName");
                      OnPropertyChanged("Name");
                  }
@@ -55,17 +43,22 @@ namespace ClientManager
          {
              get
              {
-                 if (_user == null)
+                 if (InnerObject == null)
                      return String.Empty;
 
-                 return _user.LastName;
+                 return InnerObject.LastName;
              }
-             set { _user.LastName = value; }
+             set
+             {
+                 InnerObject.LastName = value;
+                 OnPropertyChanged("LastName");
+                 OnPropertyChanged("Name");
+             }
          }
 
          public string Name
          {
-             get { return _user.FirstName + " " + _user.LastName; }
+             get { return InnerObject.FirstName + " " + InnerObject.LastName; }
          }
 
          public ICommand MyCommand { get; set; }
